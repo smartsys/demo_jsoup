@@ -21,8 +21,6 @@ import de.smartsys.string.DoString;
 
 public class Starte_Jsoup
 {
-	static int anzahlDurschlauf = 0;
-	static ArrayList AuftragsListeDB = new ArrayList();
 
 	public static void main(String[] args)
 	{				
@@ -30,16 +28,11 @@ public class Starte_Jsoup
 		Response QuelleDocumentResponse = null;
 		
 		try
-		{
-			
-			String url = "grüneliebe.de/hundefutter-barf-und-fertigfutter/";
-			
-			System.out.println(url);
-			
-			url = IDN.toASCII(url);
-			 
-			System.out.println(url);
-			 
+		{			
+			String url = "grüneliebe.de/hundefutter-barf-und-fertigfutter/";	
+			System.out.println(url);			
+			url = IDN.toASCII(url);			 
+			System.out.println(url);			 
 			QuelleDocumentResponse = Jsoup
 										.connect("http://"+url)
 										.method(Method.GET)
@@ -52,7 +45,6 @@ public class Starte_Jsoup
 		}
 		catch (IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
 	
