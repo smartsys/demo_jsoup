@@ -50,6 +50,7 @@ public class Starte_Jsoup
 	
 		System.out.println(QuelleDocumentResponse.statusCode());
 		System.out.println(QuelleDocumentResponse.contentType());
+		System.out.println(QuelleDocumentResponse.contentType());
 		
 
 	}
